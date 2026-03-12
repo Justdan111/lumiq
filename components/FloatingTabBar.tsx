@@ -5,7 +5,6 @@ import Animated, {
   useAnimatedStyle,
   withSpring,
   withTiming,
-  interpolateColor,
 } from "react-native-reanimated";
 import { BottomTabBarProps } from "@react-navigation/bottom-tabs";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
@@ -84,7 +83,7 @@ const TabButton = ({
           >
             <View
               style={{
-                width: 58,
+                width: 80,
                 height: 58,
                 borderRadius: 29,
                 backgroundColor: isFocused ? Colors.amber.DEFAULT : Colors.bg.elevated,

@@ -11,16 +11,15 @@ import Animated, {
   withTiming,
   withDelay,
   withSpring,
-  FadeIn,
 } from "react-native-reanimated";
 import { LinearGradient } from "expo-linear-gradient";
 import { useRouter } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { ParticleBackground } from "../../components/ParticleBackground";
-import { CategoryChip } from "../../components/CategoryChip";
 import { CATEGORIES, CategoryId } from "../../constants/categories";
 import { Colors } from "../../constants/colors";
 import { saveSelectedCategories, setOnboarded } from "../../utils/storage";
+import { CategoryChip } from "@/components/CategoryChip";
 
 export default function Onboarding() {
   const router = useRouter();
@@ -71,7 +70,7 @@ export default function Onboarding() {
       selected.length > 0 ? selected : CATEGORIES.map((c) => c.id);
     await saveSelectedCategories(cats);
     await setOnboarded();
-    router.replace("/(tabs)/today");
+    router.replace("./(tabs)/today");
   };
 
   return (
@@ -136,7 +135,7 @@ export default function Onboarding() {
               lineHeight: 24,
             }}
           >
-            Pick your interests. We'll deliver one mind-expanding idea each day.
+            Pick your interests. We&apos;ll deliver one mind-expanding idea each day.
           </Text>
         </Animated.View>
 

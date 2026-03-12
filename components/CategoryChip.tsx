@@ -11,7 +11,6 @@ import { Colors } from "../constants/colors";
 
 interface Props {
   label: string;
-  emoji: string;
   color: string;
   selected: boolean;
   onPress: () => void;
@@ -20,7 +19,6 @@ interface Props {
 
 export const CategoryChip = ({
   label,
-  emoji,
   color,
   selected,
   onPress,
@@ -58,10 +56,8 @@ export const CategoryChip = ({
           backgroundColor: selected
             ? `${color}20`
             : "rgba(255,255,255,0.04)",
-          gap: 7,
         }}
       >
-        <Text style={{ fontSize: 14 }}>{emoji}</Text>
         <Text
           style={{
             fontFamily: "DMSans_500Medium",

@@ -11,20 +11,16 @@ export type CategoryId =
 export interface Category {
   id: CategoryId;
   label: string;
-  emoji: string;
   color: string;
 }
 
 export const CATEGORIES: Category[] = [
-  { id: "science", label: "Science", emoji: "🔬", color: Colors.category.science },
-  { id: "history", label: "History", emoji: "📜", color: Colors.category.history },
-  { id: "philosophy", label: "Philosophy", emoji: "🧠", color: Colors.category.philosophy },
-  { id: "tech", label: "Tech", emoji: "⚡", color: Colors.category.tech },
-  { id: "psychology", label: "Psychology", emoji: "🪞", color: Colors.category.psychology },
+  { id: "science", label: "Science", color: Colors.category.science },
+  { id: "history", label: "History", color: Colors.category.history },
+  { id: "philosophy", label: "Philosophy", color: Colors.category.philosophy },
+  { id: "tech", label: "Tech", color: Colors.category.tech },
+  { id: "psychology", label: "Psychology", color: Colors.category.psychology },
 ];
 
 export const getCategoryColor = (id: CategoryId): string =>
   Colors.category[id] ?? Colors.amber.DEFAULT;
-
-export const getCategoryEmoji = (id: CategoryId): string =>
-  CATEGORIES.find((c) => c.id === id)?.emoji ?? "✦";

@@ -158,7 +158,6 @@ export default function Onboarding() {
               <CategoryChip
                 key={cat.id}
                 label={cat.label}
-                emoji={cat.emoji}
                 color={cat.color}
                 selected={selected.includes(cat.id)}
                 onPress={() => toggle(cat.id)}

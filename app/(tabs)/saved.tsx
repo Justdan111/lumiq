@@ -447,7 +447,6 @@ export default function Saved() {
                   gap: 5,
                 }}
               >
-                <Text style={{ fontSize: 11 }}>{cat.emoji}</Text>
                 <Text
                   style={{
                     fontFamily: "DMSans_500Medium",

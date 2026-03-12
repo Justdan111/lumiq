@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { View } from "react-native";
 import { useRouter } from "expo-router";
-import { isOnboarded } from "../utils/storage";
+import { isOnboarded, resetAll } from "../utils/storage";
 import { Colors } from "../constants/colors";
 
 export default function Entry() {
@@ -9,12 +9,8 @@ export default function Entry() {
 
   useEffect(() => {
     const check = async () => {
-      const onboarded = await isOnboarded();
-      if (onboarded) {
-        router.replace("./(tabs)/today");
-      } else {
-        router.replace("./(onboarding)/index");
-      }
+      await resetAll(); // DEV: always show onboarding
+      router.replace("/(onboarding)");
     };
     // Small delay to prevent flash
     const t = setTimeout(check, 100);

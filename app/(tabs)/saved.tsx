@@ -15,7 +15,7 @@ import { getCategoryColor, CATEGORIES } from "../../constants/categories";
 import { Colors } from "../../constants/colors";
 import { Fact } from "../../data/facts";
 
-// ── Saved Card ────────────────────────────────────────────────────────────
+// ── Saved Card 
 const SavedCard = ({
   fact,
   onPress,
@@ -101,7 +101,7 @@ const SavedCard = ({
   );
 };
 
-// ── Empty State ────────────────────────────────────────────────────────────
+// ── Empty State 
 const EmptyState = () => (
   <Animated.View
     entering={FadeIn.delay(200)}
@@ -134,7 +134,7 @@ const EmptyState = () => (
   </Animated.View>
 );
 
-// ── Detail Modal ────────────────────────────────────────────────────────────
+// ── Detail Modal 
 const DetailModal = ({
   fact,
   onClose,
@@ -323,7 +323,7 @@ const DetailModal = ({
   );
 };
 
-// ── Main Screen ─────────────────────────────────────────────────────────────
+// ── Main Screen 
 export default function Saved() {
   const insets = useSafeAreaInsets();
   const { savedIds, remove } = useSaved();

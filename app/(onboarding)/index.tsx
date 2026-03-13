@@ -102,13 +102,14 @@ export default function Onboarding() {
         </Animated.View>
 
         {/* Hero */}
-        <Animated.View style={[{ marginTop: 72 }, titleStyle]}>
+        <Animated.View style={[{ marginTop: 72, alignItems: "center" }, titleStyle]}>
           <Text
             style={{
               fontFamily: "PlayfairDisplay_700Bold",
               fontSize: 52,
               color: Colors.text.primary,
               lineHeight: 60,
+              textAlign: "center",
             }}
           >
             One thing.
@@ -119,6 +120,7 @@ export default function Onboarding() {
               fontSize: 52,
               color: Colors.amber.DEFAULT,
               lineHeight: 62,
+              textAlign: "center",
             }}
           >
             Every day.
@@ -126,13 +128,14 @@ export default function Onboarding() {
         </Animated.View>
 
         {/* Subtitle */}
-        <Animated.View style={[{ marginTop: 18 }, subtitleStyle]}>
+        <Animated.View style={[{ marginTop: 18, alignItems: "center" }, subtitleStyle]}>
           <Text
             style={{
               fontFamily: "DMSans_400Regular",
               fontSize: 16,
               color: Colors.text.secondary,
               lineHeight: 24,
+              textAlign: "center",
             }}
           >
             Pick your interests. We&apos;ll deliver one mind-expanding idea each day.
@@ -140,7 +143,7 @@ export default function Onboarding() {
         </Animated.View>
 
         {/* Category chips */}
-        <Animated.View style={[{ marginTop: 40 }, chipsStyle]}>
+        <Animated.View style={[{ marginTop: 40, alignItems: "center" }, chipsStyle]}>
           <Text
             style={{
               fontFamily: "DMSans_700Bold",
@@ -149,11 +152,12 @@ export default function Onboarding() {
               color: Colors.text.muted,
               textTransform: "uppercase",
               marginBottom: 16,
+              textAlign: "center",
             }}
           >
             Choose your interests
           </Text>
-          <View style={{ flexDirection: "row", flexWrap: "wrap", gap: 10 }}>
+          <View style={{ flexDirection: "row", flexWrap: "wrap", gap: 10, justifyContent: "center" }}>
             {CATEGORIES.map((cat, i) => (
               <CategoryChip
                 key={cat.id}
@@ -213,7 +217,7 @@ export default function Onboarding() {
               </Text>
             </LinearGradient>
           </TouchableOpacity>
-
+{/* 
           <Text
             style={{
               fontFamily: "DMSans_400Regular",
@@ -232,7 +236,7 @@ export default function Onboarding() {
             >
               Sign In
             </Text>
-          </Text>
+          </Text> */}
         </Animated.View>
       </ScrollView>
     </View>

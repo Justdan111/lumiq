@@ -6,11 +6,9 @@ import {
   TouchableOpacity,
   Modal,
   ScrollView,
-  TextInput,
 } from "react-native";
 import Animated, { FadeInDown, FadeIn } from "react-native-reanimated";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
-import { LinearGradient } from "expo-linear-gradient";
 import { useSaved } from "../../hooks/useSaved";
 import { useSavedFacts } from "../../hooks/useFacts";
 import { getCategoryColor, CATEGORIES } from "../../constants/categories";

@@ -30,7 +30,7 @@ export const getSelectedCategories = async (): Promise<string[]> => {
   return raw ? JSON.parse(raw) : [];
 };
 
-// ── Saved Facts ─────────────────────────────────────────────────────────────
+// ── Saved Facts 
 export const getSavedFactIds = async (): Promise<string[]> => {
   const raw = await AsyncStorage.getItem(KEYS.SAVED_FACTS);
   return raw ? JSON.parse(raw) : [];
@@ -54,7 +54,7 @@ export const removeSavedFactId = async (id: string): Promise<void> => {
   );
 };
 
-// ── Streak ──────────────────────────────────────────────────────────────────
+// ── Streak 
 export const getStreakData = async (): Promise<{
   streak: number;
   lastOpened: string | null;
@@ -85,7 +85,7 @@ export const updateStreak = async (): Promise<number> => {
   return newStreak;
 };
 
-// ── Activity Heatmap ────────────────────────────────────────────────────────
+// ── Activity Heatmap 
 export const recordActivity = async (dateString: string): Promise<void> => {
   const raw = await AsyncStorage.getItem(KEYS.ACTIVITY);
   const activity: Record<string, number> = raw ? JSON.parse(raw) : {};
@@ -98,7 +98,7 @@ export const getActivity = async (): Promise<Record<string, number>> => {
   return raw ? JSON.parse(raw) : {};
 };
 
-// ── Total Lessons ────────────────────────────────────────────────────────────
+// ── Total Lessons 
 export const incrementTotalLessons = async (): Promise<void> => {
   const raw = await AsyncStorage.getItem(KEYS.TOTAL_LESSONS);
   const count = raw ? parseInt(raw, 10) : 0;
@@ -110,7 +110,7 @@ export const getTotalLessons = async (): Promise<number> => {
   return raw ? parseInt(raw, 10) : 0;
 };
 
-// ── Reset (dev helper) ───────────────────────────────────────────────────────
+// ── Reset (dev helper) 
 export const resetAll = async (): Promise<void> => {
   await AsyncStorage.multiRemove(Object.values(KEYS));
 };

@@ -82,7 +82,7 @@ export const FACTS: Fact[] = [
     readTime: 3,
   },
 
-  // ── HISTORY (10) ────────────────────────────────────────────────────────
+  // ── HISTORY (10) 
   {
     id: "his-001",
     category: "history",
@@ -154,7 +154,7 @@ export const FACTS: Fact[] = [
     readTime: 3,
   },
 
-  // ── PHILOSOPHY (10) ──────────────────────────────────────────────────────
+  // ── PHILOSOPHY (10) 
   {
     id: "phi-001",
     category: "philosophy",
@@ -298,7 +298,7 @@ export const FACTS: Fact[] = [
     readTime: 3,
   },
 
-  // ── PSYCHOLOGY (10) ──────────────────────────────────────────────────────
+  // ── PSYCHOLOGY (10) 
   {
     id: "psy-001",
     category: "psychology",

@@ -160,7 +160,7 @@ const AchievementBadge = ({
 
 export default function Streak() {
   const insets = useSafeAreaInsets();
-  const { streak, activity, totalLessons, loading } = useStreak();
+  const { streak, activity, totalLessons } = useStreak(true);
   const router = useRouter();
 
   const focusTime = Math.round(totalLessons * 3.5 * 10) / 10;

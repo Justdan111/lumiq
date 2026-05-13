@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { View, Text, ActivityIndicator } from "react-native";
-import Animated, {
-  useSharedValue,
-  useAnimatedStyle, withRepeat, withTiming, withDelay, Easing, } from "react-native-reanimated";
+import Animated, { useSharedValue, useAnimatedStyle, withRepeat, withTiming, withDelay, Easing, } from "react-native-reanimated";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import * as Haptics from "expo-haptics";
 import { ParticleBackground } from "../../components/ParticleBackground";

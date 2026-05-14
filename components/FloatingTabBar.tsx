@@ -1,9 +1,6 @@
 import React, { useEffect } from "react";
 import { View, TouchableOpacity, Text } from "react-native";
-import Animated, {
-  useSharedValue,
-  useAnimatedStyle,
-  withSpring, withTiming,} from "react-native-reanimated";
+import Animated, { useSharedValue, useAnimatedStyle, withSpring, withTiming,} from "react-native-reanimated";
 import { BottomTabBarProps } from "@react-navigation/bottom-tabs";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Colors } from "../constants/colors";

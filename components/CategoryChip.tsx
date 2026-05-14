@@ -1,12 +1,6 @@
 import React, { useEffect } from "react";
 import { TouchableOpacity, Text } from "react-native";
-import Animated, {
-  useSharedValue,
-  useAnimatedStyle,
-  withSpring,
-  withDelay,
-  withTiming,
-} from "react-native-reanimated";
+import Animated, { useSharedValue, useAnimatedStyle,  withSpring,  withDelay, withTiming, } from "react-native-reanimated";
 import { Colors } from "../constants/colors";
 
 interface Props {
